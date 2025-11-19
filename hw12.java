@@ -54,22 +54,12 @@ public class hw12 {
 		return res;
 	}
 	
-	public static double sqrt(int A) {
-		double x=A;
-		double eps=0.0001;
-		while(true) {
-			double next=0.5*(x+(double) A/x);
-			if(Math.abs(next-x)<0.0001) {
-				return next;
-			}
-			x=next;
-		}
-	}
+
 	
 	public static void main(String[] args) {
 		System.out.println(hw12.valueOccur(new int[] {10,10,10}));
 		System.out.println(hw12.noEqualDigits(44432));
 		System.out.println(hw12.sameDigitMerge(new int[] {15,15,15,51,51,51}));
-		System.out.println(hw12.sqrt(26));
+		
 	}
 }
