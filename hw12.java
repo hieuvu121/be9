@@ -54,21 +54,17 @@ public class hw12 {
 		return res;
 	}
 	
-	public static int sqrt(int A) {
-	    int left = 1, right = A, ans = 0;
-	    while (left<=right) {
-	        int mid=left+(right-left)/2;
-	        long res=(long) mid * mid;
-	        if(res==A) {
-	            return mid;
-	        }else if (res<A) {
-	            ans=mid;
-	            left=mid+1;
-	        }else{
-	            right=mid-1;
-	        }
-	    }
-	    return ans;
+	public static double sqrt(int A) {
+		if (A==0||A==1) return A;
+		double x=A;
+		double eps=0.01;
+		while(true) {
+			double next=0.5*(x+(double) A/x);
+			if(Math.abs(next-x)<eps) {
+				return next;
+			}
+			x=next;
+		}
 	}
 
 	
