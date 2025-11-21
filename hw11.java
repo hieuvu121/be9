@@ -17,7 +17,7 @@ public class hw11{
 			}
 			int res=A[index]+A[index+1];1
 
-			.if(res%2==0) {
+			if(res%2==0) {
 				count+=1;
 				if(index==A.length-2) {return count;}
 				index+=2;

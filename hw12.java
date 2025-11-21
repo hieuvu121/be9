@@ -54,6 +54,20 @@ public class hw12 {
 		return res;
 	}
 	
+	
+	public static int findNumber(int[] A, int findNumber) {
+		int left=0;
+		int right=A.length-1;
+		while(left<=right) {
+			int mid=(right+left)/2;
+			if(A[mid]==findNumber) {
+				return mid;
+			}else if(findNumber<A[mid]) {
+				right=mid-1;
+			}else {left=mid+1;}
+		}
+		return 0;
+	}
 	public static double sqrt(int A) {
 		if (A==0||A==1) return A;
 		double x=A;
@@ -72,7 +86,7 @@ public class hw12 {
 	
 	public static void main(String[] args) {
 		System.out.println(hw12.valueOccur(new int[] {10,10,10}));
-		System.out.println(hw12.noEqualDigits(44432));
+		System.out.println(hw12.noEqualDigits(1099));
 		System.out.println(hw12.sameDigitMerge(new int[] {15,15,15,51,51,51}));
 		System.out.println(hw12.sqrt(26));
 		
