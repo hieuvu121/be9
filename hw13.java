@@ -23,7 +23,7 @@ class hw13{
 				}else {
 					res=Math.min(res, rightPointer-leftPointer+1);}
 				
-				if(A[leftPointer]>=l&&A[rightPointer]<=r) {
+				if(A[leftPointer]>=l&&A[leftPointer]<=r) {
 					int oldValue=checkValid.get(A[leftPointer]);
 					if(oldValue==1) {
 						missing++;
